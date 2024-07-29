@@ -1,17 +1,18 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import Image from "../../public/Image1.jpg" ;
 
 function Banner() {
   return (
     <>
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row">
-        <div className="w-full md:w-1/2">
+        <div className="w-full order-2 md:order-1 md:w-1/2 mt-12 md:mt-32">
           <div className="space-y-12">
             <h1 className="text-4xl font-bold">
               Hello, Welcome here to learn something{" "}
               <span className="text-pink-500">new everyday!!!</span>
             </h1>
-            <p>
+            <p className="font-xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Temporibus illum officia cum earum unde voluptatem hic, repellat,
               expedita consectetur animi eaque ullam deleniti odit veniam quas?
@@ -30,8 +31,11 @@ function Banner() {
               <input type="text" className="grow" placeholder="Email" />
             </label>
           </div>
+          <button className="btn mt-6 btn-secondary">Secondary</button>
         </div>
-        <div className="w-full md:w-1/2">Right</div>
+        <div className=" order-1 w-full md:w-1/2">
+          <img src={Image} className="w-85 h-85"alt="" />
+        </div>
       </div>
     </>
   );
