@@ -49,6 +49,34 @@ return (
 <h1 className='font-semibold text-xl pb-2'> Free Offered Courses</h1>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum unde dolorem blanditiis nulla obcaecati corporis temporibus ipsa eius optio. Laborum eaque veniam nihil, odio est ducimus! Vitae vero cum et?</p>
 </div>
+<div>
+<Slider {...settings}>
+        <div>
+          <h3>1</h3>
+        </div>
+        <div>
+          <h3>2</h3>
+        </div>
+        <div>
+          <h3>3</h3>
+        </div>
+        <div>
+          <h3>4</h3>
+        </div>
+        <div>
+          <h3>5</h3>
+        </div>
+        <div>
+          <h3>6</h3>
+        </div>
+        <div>
+          <h3>7</h3>
+        </div>
+        <div>
+          <h3>8</h3>
+        </div>
+      </Slider>
+</div>
 </>
   )
 }
