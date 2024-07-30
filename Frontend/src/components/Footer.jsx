@@ -53,7 +53,7 @@ function Footer() {
           <aside>
             <p>
               Copyright © {new Date().getFullYear()} - All right reserved by
-              ACME Industries Ltd
+              Beauty Kumari
             </p>
           </aside>
         </footer>
