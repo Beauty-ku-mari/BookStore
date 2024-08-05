@@ -1,5 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -7,9 +5,9 @@ import Cards from "./Cards"; // Adjust the path as necessary
 import list from "../../public/list.json";
 
 function Freebook() {
-  const filterData = list.filter((data) => data.category === "Free");
+  const filterData = list.filter((item) => item.price === 0);
 
-  var settings = {
+  const settings = {
     dots: true,
     infinite: false,
     speed: 500,
@@ -58,7 +56,17 @@ function Freebook() {
       <div>
         <Slider {...settings}>
           {filterData.map((item) => (
-            <Cards item={item} key={item.id} />
+            <Cards
+              key={item.id}
+              name={item.name}
+              image={item.image}
+              title={item.title}
+              category={item.category
+                .split(" ")
+                .map((cat) => cat.charAt(0).toUpperCase() + cat.slice(1))
+                .join(" ")
+              }
+            />
           ))}
         </Slider>
       </div>

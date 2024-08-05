@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Course 1",
+    "description": "Description for Course 1",
+    "image": "https://example.com/image1.jpg",
+    "category": "Free"
+  },
+  {
+    "id": 2,
+    "title": "Course 2",
+    "description": "Description for Course 2",
+    "image": "https://example.com/image2.jpg",
+    "category": "Free"
+  }
+
+]
