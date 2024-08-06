@@ -61,6 +61,7 @@ function Freebook() {
               name={item.name}
               image={item.image}
               title={item.title}
+              price={item.price}
               category={item.category
                 .split(" ")
                 .map((cat) => cat.charAt(0).toUpperCase() + cat.slice(1))
