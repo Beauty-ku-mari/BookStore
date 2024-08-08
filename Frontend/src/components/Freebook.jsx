@@ -5,7 +5,7 @@ import Cards from "./Cards"; // Adjust the path as necessary
 import list from "../../public/list.json";
 
 function Freebook() {
-  const filterData = list.filter((item) => item.price === 0);
+  const filterData = list.filter((item) => item.category === "Free");
 
   const settings = {
     dots: true,
@@ -63,9 +63,7 @@ function Freebook() {
               title={item.title}
               price={item.price}
               category={item.category
-                .split(" ")
-                .map((cat) => cat.charAt(0).toUpperCase() + cat.slice(1))
-                .join(" ")
+             
               }
             />
           ))}
