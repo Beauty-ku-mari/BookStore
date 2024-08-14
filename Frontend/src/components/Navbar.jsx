@@ -16,7 +16,7 @@ function Navbar() {
       localStorage.setItem("theme", "light");
       document.body.classList.remove("dark");
     }
-  }, []);
+    },[theme]);
 
   const [sticky, setSticky] = useState(false);
 
@@ -61,7 +61,7 @@ function Navbar() {
             : ""
         }`}
       >
-        <div className="navbar bg-base-100">
+        <div className="navbar ">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -102,7 +102,7 @@ function Navbar() {
               <label className="px-3 py-2 border rounded-md flex items-center gap-2">
                 <input
                   type="text"
-                  className="grow outline-none"
+                  className="grow outline-none dark:bg-slate-900 dark:text-white"
                   placeholder="Search"
                 />
                 <svg
