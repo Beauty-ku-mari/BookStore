@@ -2,6 +2,10 @@
 import React, { useEffect, useState } from "react";
 
 function Navbar() {
+
+const[theme,setTheme]=useState(localStorage.getItem("theme")?localStorage.getItem("theme") : "light")
+const element= document.documentElement;
+
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
