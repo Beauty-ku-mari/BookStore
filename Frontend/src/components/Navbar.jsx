@@ -5,6 +5,15 @@ function Navbar() {
 
 const[theme,setTheme]=useState(localStorage.getItem("theme")?localStorage.getItem("theme") : "light")
 const element= document.documentElement;
+useEffect(()=>{
+   if(theme==="dark"){
+     element.classList.add("dark");
+     localStorage.setItem("theme","dark")
+     document.body.classList.add("dark");
+}
+
+
+})
 
   const [sticky, setSticky] = useState(false);
 
