@@ -2,18 +2,21 @@
 import React, { useEffect, useState } from "react";
 
 function Navbar() {
-
-const[theme,setTheme]=useState(localStorage.getItem("theme")?localStorage.getItem("theme") : "light")
-const element= document.documentElement;
-useEffect(()=>{
-   if(theme==="dark"){
-     element.classList.add("dark");
-     localStorage.setItem("theme","dark")
-     document.body.classList.add("dark");
-}
-
-
-})
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
+  const element = document.documentElement;
+  useEffect(() => {
+    if (theme === "dark") {
+      element.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      document.body.classList.add("dark");
+    } else {
+      element.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      document.body.classList.remove("dark");
+    }
+  }, []);
 
   const [sticky, setSticky] = useState(false);
 
@@ -26,9 +29,9 @@ useEffect(()=>{
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -51,7 +54,13 @@ useEffect(()=>{
 
   return (
     <>
-      <div className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-50 ${sticky ? 'sticky-navbar shadow-md bg-base-200 duration-300 transition-all ease-in-out' : ''}`}>
+      <div
+        className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-50 ${
+          sticky
+            ? "sticky-navbar shadow-md bg-base-200 duration-300 transition-all ease-in-out"
+            : ""
+        }`}
+      >
         <div className="navbar bg-base-100">
           <div className="navbar-start">
             <div className="dropdown">
