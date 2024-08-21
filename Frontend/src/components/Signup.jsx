@@ -2,11 +2,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { Link } from "react-router-dom";
+import Login from "./Login";
+
 function Signup() {
   return (
     <>
       <div className="flex h-screen items-center justify-center">
-        <div id="my_modal_3" className="">
+        <div className="w-[600px]">
           <div className="modal-box">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
@@ -56,15 +58,14 @@ function Signup() {
               <p className="text-xl">
                 Have account?{" "}
                 <button
-                  to="/"
                   className=" underline text-blue-500 cursor-pointer"
                   onClick={() =>
                     document.getElementById("my_modal_3").showModal()
                   }
                 >
-                  login
+                  Login
                 </button>{" "}
-              <Login/>
+            <Login />
               </p>
             </div>
           </div>
