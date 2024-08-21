@@ -1,0 +1,24 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "mern project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": " nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beauty-ku-mari/BookStore.git"
+  },
+  "author": "Beauty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Beauty-ku-mari/BookStore/issues"
+  },
+  "homepage": "https://github.com/Beauty-ku-mari/BookStore#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4"
+  }
+}
