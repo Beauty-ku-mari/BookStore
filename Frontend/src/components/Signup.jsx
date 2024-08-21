@@ -53,7 +53,7 @@ function Signup() {
               <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
                 Signup
               </button>
-              <p>
+              <p className="text-xl">
                 Have account?{" "}
                 <button
                   to="/"
@@ -64,7 +64,7 @@ function Signup() {
                 >
                   login
                 </button>{" "}
-              
+              <Login/>
               </p>
             </div>
           </div>
