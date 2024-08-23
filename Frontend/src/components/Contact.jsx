@@ -22,6 +22,8 @@ const handleSubmit = (e) => {
 
 return(
 
+<div className="flex justify-center items-center h-screen">
+      <form onSubmit={handleSubmit} className="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg"></form>
 
 
 )
