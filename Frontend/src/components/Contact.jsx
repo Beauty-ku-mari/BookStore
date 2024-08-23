@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 const ContactForm  = () => {
-return(
+
 
  const [formData, setFormData] = useState({
     name: '',
@@ -13,6 +13,14 @@ return(
  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log(formData);
+  };
+
+return(
 
 
 
