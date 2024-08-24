@@ -23,16 +23,21 @@ export const signup = async (req, res) => {
     }
 };
 
-export const login = async(req, res) => {
-try{
-    const{ email, password } = req.body;
-   const user = await User.findOne({ email });
+export const login = async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        const user = await User.findOne({ email });
+        const isMatch = await bcryptjs.compare(password, user.password);
+        if (!user || !isMatch) {
+
+
+        } else {
+
+
+        }
+    } catch {
 
 
 
-}catch{
-
-
-
-}
+    }
 };
