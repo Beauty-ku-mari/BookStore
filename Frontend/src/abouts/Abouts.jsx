@@ -9,7 +9,6 @@ function Abouts() {
     <>
       <Navbar />
       <About />
-
       <Footer />
     </>
   );

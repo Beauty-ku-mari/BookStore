@@ -37,7 +37,7 @@
     
     {
     "id":5,
-    "name":"Food Book",
+    "name":"Receipe Book",
     "title":"gyjeshflnffjdfkdnnjd",
     "price":200,
     "category":"Free",
@@ -95,6 +95,33 @@
     "title":"gyjeshflnffjdfkdnnjd",
     "price":0,
     "category":"Free",
+    "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1722311756~exp=1722315356~hmac=d7bb0fb4f59fdfb76d1eef9ff64f2a0abf390427e0e6b2b9d6b1acfae22027c5&w=740"
+    },
+
+{
+    "id":11,
+    "name":"Gaming Book",
+    "title":"gyjeshflnffjdfkdnnjd",
+    "price":800,
+    "category":"paid",
+    "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1722311756~exp=1722315356~hmac=d7bb0fb4f59fdfb76d1eef9ff64f2a0abf390427e0e6b2b9d6b1acfae22027c5&w=740"
+    },
+
+{
+    "id":11,
+    "name":"Horror Book",
+    "title":"gyjeshflnffjdfkdnnjd",
+    "price":600,
+    "category":"paid",
+    "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1722311756~exp=1722315356~hmac=d7bb0fb4f59fdfb76d1eef9ff64f2a0abf390427e0e6b2b9d6b1acfae22027c5&w=740"
+    },
+
+{
+    "id":11,
+    "name":"Technical Book",
+    "title":"gyjeshflnffjdfkdnnjd",
+    "price":450,
+    "category":"paid",
     "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1722311756~exp=1722315356~hmac=d7bb0fb4f59fdfb76d1eef9ff64f2a0abf390427e0e6b2b9d6b1acfae22027c5&w=740"
     }
     ]
