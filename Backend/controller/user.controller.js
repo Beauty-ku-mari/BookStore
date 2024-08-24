@@ -13,12 +13,9 @@ export const signup = async (req, res) => {
             email,
             password,
         });
-
-
+        createUser.save();
+        res.status(201).json({ message: "Internal server error" });
     } catch {
-
-
-
-
+        console.log("Error: " + error.message);
     }
 };
