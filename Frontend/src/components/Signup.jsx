@@ -13,7 +13,16 @@ function Signup() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+const userInfo = {
+      fullname: data.fullname,
+      email: data.email,
+      password: data.password,
+    };
+
+
+
+};
   return (
     <>
       <div className="flex h-screen items-center justify-center">
@@ -35,12 +44,12 @@ function Signup() {
                 <br />
                 <input
                   type="text"
-                  placeholder="Enter your full name"
+                  placeholder="Enter your fullname"
                   className="w-80 px-3 py-1 border rounded-md outline-none "
-                  {...register("name", { required: true })}
+                  {...register("fullname", { required: true })}
                 />
                 <br />
-                {errors.name && (
+                {errors.fullname && (
                   <span className="text-sm text-red-500">
                     This field is required
                   </span>
