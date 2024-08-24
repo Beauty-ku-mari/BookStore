@@ -1,14 +1,30 @@
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable no-unused-vars */
+import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import Cards from "./Cards"; // Adjust the path as necessary
-import list from "../../public/list.json";
+
+import Cards from "./Cards"; //
+import axios from "axios";
 
 function Freebook() {
-  const filterData = list.filter((item) => item.category === "Free");
+  const [book, setBook] = useState([]);
+  useEffect(() => {
+    const getBook = async () => {
+      try {
+        const res = await axios.get("http://localhost:4001/book");
 
-  const settings = {
+        const data = res.data.filter((item) => item.category === "Free");
+        console.log(data);
+        setBook(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getBook();
+  }, []);
+
+  var settings = {
     dots: true,
     infinite: false,
     speed: 500,
@@ -44,33 +60,34 @@ function Freebook() {
   };
 
   return (
-    <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
-      <div>
-        <h1 className="font-semibold text-xl pb-2">Free Offered Courses</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum unde
-          dolorem blanditiis nulla obcaecati corporis temporibus ipsa eius
-          optio. Laborum eaque veniam nihil, odio est ducimus! Vitae vero cum
-          et?
-        </p>
+    <>
+      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
+        <div>
+          <h1 className="font-semibold text-xl pb-2">Free Offered Courses</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum unde
+            dolorem blanditiis nulla obcaecati corporis temporibus ipsa eius
+            optio. Laborum eaque veniam nihil, odio est ducimus! Vitae vero cum
+            et?
+          </p>
+        </div>
+
+        <div>
+          <Slider {...settings}>
+            {book.map((item) => (
+              <Cards
+                key={item.id}
+                name={item.name}
+                image={item.image}
+                title={item.title}
+                price={item.price}
+                category={item.category}
+              />
+            ))}
+          </Slider>
+        </div>
       </div>
-      <div>
-        <Slider {...settings}>
-          {filterData.map((item) => (
-            <Cards
-              key={item.id}
-              name={item.name}
-              image={item.image}
-              title={item.title}
-              price={item.price}
-              category={item.category
-             
-              }
-            />
-          ))}
-        </Slider>
-      </div>
-    </div>
+    </>
   );
 }
 
