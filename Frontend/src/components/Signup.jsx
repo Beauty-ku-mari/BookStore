@@ -14,18 +14,22 @@ function Signup() {
   } = useForm();
 
   const onSubmit = (data) => {
-const userInfo = {
+    const userInfo = {
       fullname: data.fullname,
       email: data.email,
       password: data.password,
     };
-await axios
+    axios
       .post("http://localhost:4001/user/signup", userInfo)
       .then((res) => {
-        console.log(res.data);
-
-
-};
+      console.log(res.data);
+      if (res.data) {
+        toast.success("Signup Successfully");
+        navigate(from, { replace: true });
+      }
+      localStorage.setItem("Users", JSON.stringify(res.data.user));
+    });
+  };
   return (
     <>
       <div className="flex h-screen items-center justify-center">
