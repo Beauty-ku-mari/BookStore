@@ -3,8 +3,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Login from "./Login";
-// eslint-disable-next-line no-unused-vars
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 function Signup() {
   const {
@@ -19,7 +19,10 @@ const userInfo = {
       email: data.email,
       password: data.password,
     };
-
+await axios
+      .post("http://localhost:4001/user/signup", userInfo)
+      .then((res) => {
+        console.log(res.data);
 
 
 };
